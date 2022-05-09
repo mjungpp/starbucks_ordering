@@ -1,0 +1,17 @@
+@value makerBrown, makerBeige from '../../common/colors.css';
+
+.footer {
+    width: 100%;
+    background-color: makerBrown;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.title {
+    color: makerBeige;
+}
+
+.copyright {
+    text-decoration: none;
+    color: makerBeige;
+}
