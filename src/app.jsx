@@ -1,9 +1,17 @@
-import './app.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import styles from './app.module.css';
+import Login from './components/login/login';
+import Order from './components/order/order';
 
-function App() {
+function App({ authService }) {
   return (
-    <div className="app">
-      <h1>Starbucks Ordering App</h1>
+    <div className={styles.app}>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path='/' element={<Login authService={authService} />} />
+          <Route path='/order' element={<Order />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
