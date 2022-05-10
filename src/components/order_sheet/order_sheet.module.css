@@ -1,0 +1,12 @@
+@value makerBeige, makerGreen, makerDarkGreen, makerWhite, makerBlack, makerBeige from '../../common/colors.css';
+
+.sheet {
+    flex-basis: 50%;
+    background-color: makerBeige;
+}
+
+.title {
+    /* width: 100%; */
+    text-align: center;
+    margin: 1em;
+}
