@@ -1,10 +1,9 @@
 @value makerBlack: black;
 @value makerWhite: white;
-@value makerLightGrey: #e8e7e6;
-@value makerLightPink: #ffeae8;
-@value makerGrey: #626262;
 @value makerGreen: #00704A;
 @value makerDarkGreen: #1E3932;
 @value makerBeige: #F6F5EF;
 @value makerBrown: #2C2A29;
 @value makerDarkBrown: #282828;
+@value makerWheat: wheat;
+@value makerShadow: rgba(217, 217, 217, 1);

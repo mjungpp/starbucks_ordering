@@ -1,0 +1,52 @@
+@value makerWheat, makerBlack, makerDarkGreen, makerBeige, makerShadow from '../../common/colors.css';
+
+.card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 1em;
+    margin-bottom: 0.5em;
+    padding: 0.2em 0;
+    background-color: makerDarkGreen;
+    box-shadow: 6px 6px 8px 0px makerShadow;
+    max-width: 50rem;
+}
+
+.img {
+    width: 10em;
+    height: 10em;
+    margin: 0.5em;
+    border-radius: 50%;
+    border: 1px solid makerBeige;
+}
+
+.item {
+    color: makerBeige;
+    width: 100%;
+}
+
+.menu,
+.temperature,
+.size,
+.cup,
+.shot,
+.syrup,
+.pump,
+.ice,
+.price {
+    font-size: 0.8rem;
+    margin-bottom: 0.1em;
+}
+
+.menu {
+    font-size: 1.2em;
+    margin-bottom:  0.5em;
+}
+
+.menu::after {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 2px;
+    background-color: makerWheat;
+}
