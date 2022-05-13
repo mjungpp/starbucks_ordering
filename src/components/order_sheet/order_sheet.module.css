@@ -1,9 +1,9 @@
-@value makerBeige, makerBrown, makerWhite, makerBlack from '../../common/colors.css';
+@value orderWheat, orderBeige, orderBrown, orderWhite, orderBlack from '../../common/colors.css';
 
 .sheet {
     flex-basis: 50%;
-    background-color: makerBeige;
-    border-right: 1px solid makerBrown;
+    background-color: orderBeige;
+    border-right: 1px solid orderBrown;
 }
 
 .title {
@@ -27,8 +27,8 @@
     width: 100%;
     border: 0;
     padding: 0.5em;
-    border: 1px solid makerBlack;
-    background: makerWhite;
+    border: 1px solid orderBlack;
+    background: orderWhite;
 }
 
 .image {
@@ -45,6 +45,6 @@
 }
 
 .preview {
-    background-color: makerBrown;
-    color: makerWhite;
+    background-color: orderBrown;
+    color: orderWhite;
 }

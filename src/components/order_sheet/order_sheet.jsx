@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './order_sheet.module.css';
 
 const OrderSheet = ({meuns}) => {
@@ -7,7 +7,7 @@ const OrderSheet = ({meuns}) => {
             <h1 className={styles.title}>Order</h1>
             <form className={styles.form}>
                 <div className={styles.container}>
-                    <img className={styles.image} src="/images/menu/no-images.jpg" alt="" />
+                    <img className={styles.image} src='/images/menu/no-images.jpg' alt="product image" />
                     <p className={styles.option}>필수 선택 항목</p>
                     <select className={styles.select} name="menu" id="menu-select">
                         <option value="">메뉴를 선택해주세요.</option>

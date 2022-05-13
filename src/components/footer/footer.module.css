@@ -1,17 +1,17 @@
-@value makerBrown, makerBeige from '../../common/colors.css';
+@value orderBrown, orderBeige from '../../common/colors.css';
 
 .footer {
     width: 100%;
-    background-color: makerBrown;
+    background-color: orderBrown;
     text-align: center;
     padding: 0.5em;
 }
 
 .title {
-    color: makerBeige;
+    color: orderBeige;
 }
 
 .copyright {
     text-decoration: none;
-    color: makerBeige;
+    color: orderBeige;
 }

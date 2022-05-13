@@ -1,8 +1,8 @@
-@value makerBeige, makerGreen, makerDarkGreen, makerWhite, makerBlack, makerBeige from '../../common/colors.css';
+@value orderWheat from '../../common/colors.css';
 
 .preview {
     flex-basis: 50%;
-    background-color: wheat;
+    background-color: orderWheat;
 }
 
 .title {

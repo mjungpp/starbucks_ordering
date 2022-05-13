@@ -1,10 +1,10 @@
-@value makerBrown, makerWhite, makerBeige, makerBlack from '../../common/colors.css';
+@value orderBrown, orderWhite, orderBeige, orderBlack from '../../common/colors.css';
 
 .header {
     width: 100%;
     text-align: center;
-    background-color: makerBrown;
-    color: makerBeige;
+    background-color: orderBrown;
+    color: orderBeige;
     padding: 0.5em;
     position: relative;
 }
@@ -19,8 +19,8 @@
     top: 1em;
     padding: 0.8em;
     border-radius: 20%;
-    color: makerWhite;
-    background-color: makerBlack;
+    color: orderWhite;
+    background-color: orderBlack;
     outline: 0;
     border : 0;
     cursor: pointer;

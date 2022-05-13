@@ -1,4 +1,4 @@
-@value makerWheat, makerBlack, makerDarkGreen, makerBeige, makerShadow from '../../common/colors.css';
+@value orderWheat, orderBlack, orderDarkGreen, orderBeige, orderShadow from '../../common/colors.css';
 
 .card {
     width: 100%;
@@ -7,8 +7,8 @@
     border-radius: 1em;
     margin-bottom: 0.5em;
     padding: 0.2em 0;
-    background-color: makerDarkGreen;
-    box-shadow: 6px 6px 8px 0px makerShadow;
+    background-color: orderDarkGreen;
+    box-shadow: 6px 6px 8px 0px orderShadow;
     max-width: 50rem;
 }
 
@@ -17,11 +17,11 @@
     height: 10em;
     margin: 0.5em;
     border-radius: 50%;
-    border: 1px solid makerBeige;
+    border: 1px solid orderBeige;
 }
 
 .item {
-    color: makerBeige;
+    color: orderBeige;
     width: 100%;
 }
 
@@ -54,5 +54,5 @@
     display: block;
     width: 90%;
     height: 2px;
-    background-color: makerWheat;
+    background-color: orderWheat;
 }

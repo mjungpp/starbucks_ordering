@@ -1,4 +1,4 @@
-@value makerGreen, makerDarkGreen, makerWhite, makerBlack, makerBeige from '../../common/colors.css';
+@value orderGreen, orderDarkGreen, orderWhite, orderBlack, orderBeige from '../../common/colors.css';
 
 .login {
     width: 30em;
@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: makerBeige;
+    background-color: orderBeige;
 }
 
 .title {
@@ -33,11 +33,11 @@
     border-radius: 1.2em;
     background-color: transparent;
     cursor: pointer;
-    border: 0.2rem solid makerDarkGreen;
+    border: 0.2rem solid orderDarkGreen;
     outline: 0;
 }
 
 .button:hover {
-    background-color: makerGreen;
-    color: makerWhite;
+    background-color: orderGreen;
+    color: orderWhite;
 }

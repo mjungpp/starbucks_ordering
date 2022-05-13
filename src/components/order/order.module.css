@@ -1,4 +1,3 @@
-@value makerGreen, makerDarkGreen, makerWhite, makerBlack, makerBeige from '../../common/colors.css';
 @value mediaQuery from '../../common/size.css';
 
 .order {
