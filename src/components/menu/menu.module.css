@@ -25,6 +25,12 @@
     width: 100%;
 }
 
+.date {
+    text-align: right;
+    margin-right: 1.5em;
+    font-size: 0.8em;
+}
+
 .menu,
 .temperature,
 .size,

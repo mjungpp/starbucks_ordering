@@ -18,6 +18,7 @@ const Menu = ({menu}) =>{
             <li className={styles.card}>
                 <img className={styles.img} src={setImages(item)} alt="menu photo" />
                 <div className={styles.item}>
+                    <p className={styles.date}>주문일 : 2021/01/13</p>
                     <h1 className={styles.menu}>{item}</h1>
                     <p className={styles.temperature}>{drink_temperature}</p>
                     <p className={styles.size}>{size}</p>
