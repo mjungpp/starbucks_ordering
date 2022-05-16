@@ -1,0 +1,11 @@
+@value orderBlack, orderWhite from '../../common/colors.css';
+
+.counter {
+    display: flex;
+}
+
+.button {
+    background-color: orderWhite;
+    border: 1px solid black;
+    margin: 0 0.3em;
+}

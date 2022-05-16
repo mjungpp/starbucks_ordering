@@ -1,4 +1,4 @@
-@value orderWheat, orderBeige, orderBrown, orderWhite, orderBlack from '../../common/colors.css';
+@value orderDarkGreen, orderBeige, orderBrown, orderWhite, orderBlack from '../../common/colors.css';
 
 .sheet {
     flex-basis: 50%;
@@ -45,6 +45,34 @@
 }
 
 .preview {
+    margin-top: 1em;
     background-color: orderBrown;
     color: orderWhite;
+    display: flex;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.submit, .reset {
+    font-size: 0.8rem;
+    width: 100%;
+    border: 0;
+    padding: 0.5em;
+    border: 1px solid orderBlack;
+    background: orderDarkGreen;
+    color: orderWhite;
+}
+
+.counter {
+    display: flex;
+}
+
+.count {
+    background-color: orderWhite;
+    border: 1px solid black;
+    margin: 0 0.3em;
+    cursor: pointer;
 }

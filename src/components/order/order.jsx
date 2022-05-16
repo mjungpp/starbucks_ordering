@@ -10,6 +10,7 @@ const Order = ({ authService }) => {
     const [ menus, setMenus ] = useState([
         {
             id : '1',
+            order_date : '2022-05-16',
             item : 'americano',
             drink_temperature : 'ice',
             size : 'venti',
@@ -17,13 +18,14 @@ const Order = ({ authService }) => {
             personal_option : {
                 shot : '1',
                 syrup : '',
-                syrup_pump : '',
+                syrup_count : '',
                 ice : 'extra'
             },
             price : 5500
         },
         {
             id : '2',
+            order_date : '2022-05-16',
             item : 'coffee-latte',
             drink_temperature : 'hot',
             size : 'tall',
@@ -31,13 +33,14 @@ const Order = ({ authService }) => {
             personal_option : {
                 shot : '',
                 syrup : 'vanila',
-                syrup_pump : '2',
+                syrup_count : 2,
                 ice : ''
             },
             price : 5500,
         },
         {
             id : '3',
+            order_date : '2022-05-16',
             item : 'java-chip-frappuccino',
             drink_temperature : 'ice',
             size : 'grande',
@@ -45,7 +48,7 @@ const Order = ({ authService }) => {
             personal_option : {
                 shot : '',
                 syrup : 'chocolate',
-                syrup_pump : '3',
+                syrup_count : 3,
                 ice : 'less'
             },
             price : 7300,
@@ -65,11 +68,15 @@ const Order = ({ authService }) => {
         })
     })
 
+    const addMenu = menu => {
+        console.log(menu);
+    }
+
     return (
         <section className={styles.order}>
             <Header onLogout={onLogout} />
             <div className={styles.container}>
-                <OrderSheet menus={menus} />
+                <OrderSheet onAdd={addMenu} />
                 <Preview menus={menus} />
             </div>
             <Footer />

@@ -10,10 +10,6 @@ const Menu = ({menu}) =>{
         return file_path;
     }
 
-    useEffect(() => {
-        console.log(Object.keys(menu));
-    }, [menu])
-
     return (
             <li className={styles.card}>
                 <img className={styles.img} src={setImages(item)} alt="menu photo" />
