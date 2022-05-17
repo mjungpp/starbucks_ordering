@@ -34,7 +34,7 @@ const Order = ({ authService }) => {
                 shot : '',
                 syrup : 'vanila',
                 syrup_count : 2,
-                ice : ''
+                ice : 'default'
             },
             price : 5500,
         },
@@ -69,7 +69,8 @@ const Order = ({ authService }) => {
     })
 
     const addMenu = menu => {
-        console.log(menu);
+        const updated = [...menus, menu];
+        setMenus(updated);
     }
 
     return (
