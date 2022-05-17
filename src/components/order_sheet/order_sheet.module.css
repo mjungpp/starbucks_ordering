@@ -44,6 +44,16 @@
     margin: 1em 0;
 }
 
+.text,
+.alert {
+    font-weight: bold;
+}
+
+.alert {
+    margin: 1em 0;
+    color: orderDarkGreen;
+}
+
 .preview {
     margin-top: 1em;
     background-color: orderBrown;
@@ -75,4 +85,8 @@
     border: 1px solid black;
     margin: 0 0.3em;
     cursor: pointer;
+}
+
+.ice {
+    display: flex;
 }
