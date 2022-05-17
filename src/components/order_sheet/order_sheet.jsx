@@ -22,22 +22,27 @@ const OrderSheet = ({ onAdd }) => {
         const menu = {
             id : Date.now(),
             order_date : getToday(),
-            item : menuRef.current.value || popupWithAlert('음료'),
-            drink_temperature : tempRef.current.value || popupWithAlert('온도'),
-            size : sizeRef.current.value || popupWithAlert('음료 사이즈'),
-            cup : cupRef.current.value || popupWithAlert('컵 사이즈'),
+            item : menuRef.current.value || popupWithAlert('메뉴를'),
+            drink_temperature : tempRef.current.value || popupWithAlert('온도를'),
+            size : sizeRef.current.value || popupWithAlert('음료 사이즈를'),
+            cup : cupRef.current.value || popupWithAlert('컵 사이즈를'),
             personal_option : {
                 shot : shot != 0 ? shot : '',
                 syrup : syrupRef.current.value || '' & setSyrup(0),
                 syrup_count : syrup != 0 ? syrup : '',
-                ice : iceRef.current.value || ''
+                ice : iceRef.current.value || popupWithAlert('얼음 양을'),
             },
             price : setTotalPrice(menuRef.current.value, sizeRef.current.value, shot, syrupRef.current.value, syrup),
         }
-        onAdd(menu);
-        formRef.current.reset();
-        setSyrup(0);
-        setShot(0);
+
+        if(menuRef.current.value && tempRef.current.value && sizeRef.current.value && cupRef.current.value && iceRef.current.value){
+            onAdd(menu);
+            formRef.current.reset();
+            setSyrup(0);
+            setShot(0);
+        }else {
+            event.preventDefault();
+        }
     }
 
     const setTotalPrice = (menu, size, shot, syrup_pump, syrup_count) => {
@@ -49,7 +54,8 @@ const OrderSheet = ({ onAdd }) => {
     }
 
     const popupWithAlert = (log) => {
-        alert(`${log}를 선택해주세요.`);
+        alert(`${log} 선택해주세요.`);
+        return;
     }
 
     const getToday = () => {
