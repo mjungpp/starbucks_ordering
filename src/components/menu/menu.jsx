@@ -1,12 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './menu.module.css';
 import ConvertService from '../../service/convert-service.js';
 
 const convertService = new ConvertService();
-const Menu = ({menu}) =>{
-    const { item, order_date, drink_temperature, size, cup, price, personal_option} = menu; 
-    const { shot, syrup, syrup_count, ice } = personal_option;
-
+const Menu = ({ menu }) =>{
+    const { item, order_date, drink_temperature, size, cup, price, shot, syrup, syrup_count, ice} = menu; 
+    
     const setImages = (item) => {
         let file_path = item && `images/menu/${item}.jpg`;
         return file_path;
@@ -24,13 +23,13 @@ const Menu = ({menu}) =>{
                     {
                         shot && <p className={styles.shot}>샷 추가 : {shot}</p>
                     }
-                    {/* {
-                        syrup && <p className={styles.syrup}>시럽 추가 : {convertService.convertValSyrup(syrup)} </p>
+                    {
+                        syrup !== 0 && <p className={styles.syrup}>시럽 추가 : {convertService.convertValSyrup(syrup)} </p>
                     }
                     {
                         syrup_count && <p className={styles.pump}>시럽 추가 펌프 : {syrup_count}</p>
                     }
-                    <p className={styles.ice}>얼음 : {convertService.convertValIce(ice)}</p> */}
+                    <p className={styles.ice}>얼음 : {convertService.convertValIce(ice)}</p>
                     <p className={styles.price}>가격 : {price}</p>
                 </div>
             </li>

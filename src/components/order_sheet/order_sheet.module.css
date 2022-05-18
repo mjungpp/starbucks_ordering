@@ -4,6 +4,7 @@
     flex-basis: 50%;
     background-color: orderBeige;
     border-right: 1px solid orderBrown;
+    overflow-y: auto;
 }
 
 .title {

@@ -8,7 +8,9 @@ const Preview = ({ menus }) => {
             <h1 className={styles.title}>Preview</h1>
             <ul className={styles.cards}>
             {
-                menus.map(menu => (<Menu key={menu.id} menu={menu} />))
+                    Object.keys(menus).map(key =>
+                        <Menu key={key} menu={menus[key]} />
+                    )
             }
             </ul>
         </section>

@@ -26,15 +26,12 @@ const OrderSheet = ({ onAdd }) => {
             drink_temperature : tempRef.current.value || popupWithAlert('온도를'),
             size : sizeRef.current.value || popupWithAlert('음료 사이즈를'),
             cup : cupRef.current.value || popupWithAlert('컵 사이즈를'),
-            personal_option : {
-                shot : shot != 0 ? shot : '',
-                syrup : syrupRef.current.value || '' & setSyrup(0),
-                syrup_count : syrup != 0 ? syrup : '',
-                ice : iceRef.current.value || popupWithAlert('얼음 양을'),
-            },
+            shot : shot != 0 ? shot : '',
+            syrup : syrupRef.current.value || '' & setSyrup(0),
+            syrup_count : syrup != 0 ? syrup : '',
+            ice : iceRef.current.value || popupWithAlert('얼음 양을'),
             price : setTotalPrice(menuRef.current.value, sizeRef.current.value, shot, syrupRef.current.value, syrup),
         }
-
         if(menuRef.current.value && tempRef.current.value && sizeRef.current.value && cupRef.current.value && iceRef.current.value){
             onAdd(menu);
             formRef.current.reset();
@@ -50,7 +47,8 @@ const OrderSheet = ({ onAdd }) => {
         let sizePrice = calculateService.calculateSizePrice(size);
         let shotPrice = shot != '' ? calculateService.calculateShotPrice(shot) : 0;
         let syrupPrice = syrup_pump != '' ? calculateService.calculateSyrupPrice(syrup_count) : 0;
-        return setPrice(menuPrice + sizePrice + shotPrice + syrupPrice);
+        let totalPrice = menuPrice + sizePrice + shotPrice + syrupPrice;
+        return totalPrice;
     }
 
     const popupWithAlert = (log) => {
