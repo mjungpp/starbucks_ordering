@@ -15,7 +15,6 @@ const OrderSheet = ({ onAdd }) => {
     const syrupRef = useRef();
     const [syrup, setSyrup] = useState(0);
     const [image, setImage] = useState('/images/menu/no-images.jpg');
-    const [price, setPrice] = useState(0);
 
     const onSubmit = event => {
         event.preventDefault();
@@ -47,7 +46,7 @@ const OrderSheet = ({ onAdd }) => {
         let sizePrice = calculateService.calculateSizePrice(size);
         let shotPrice = shot !== '' ? calculateService.calculateShotPrice(shot) : 0;
         let syrupPrice = syrup_pump !== '' ? calculateService.calculateSyrupPrice(syrup_count) : 0;
-        return setPrice(menuPrice + sizePrice + shotPrice + syrupPrice);
+        return (menuPrice + sizePrice + shotPrice + syrupPrice);
     }
 
     const popupWithAlert = (log) => {
