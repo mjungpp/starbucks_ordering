@@ -41,19 +41,18 @@
     margin-bottom: 1em;
 }
 
-.option {
-    margin: 1em 0;
-}
-
-.text,
-.alert {
+.text{
     font-weight: bold;
+    color: orderDarkGreen;
+    margin-bottom: 0.5em;
 }
 
-.alert {
-    margin: 1em 0;
+.option {
+    font-weight: bold;
     color: orderDarkGreen;
+    margin: 0.5em 0;
 }
+
 
 .preview {
     margin-top: 1em;
@@ -79,6 +78,16 @@
 
 .counter {
     display: flex;
+    justify-content : space-between;
+    margin : 0.2em;
+}
+
+.counterContainer {
+    display: flex;
+}
+
+.noti {
+    margin-right: 0.1em;
 }
 
 .count {

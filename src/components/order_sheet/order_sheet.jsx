@@ -99,8 +99,7 @@ const OrderSheet = ({ onAdd }) => {
             <form ref={formRef} className={styles.form}>
                 <div className={styles.container}>
                     <img className={styles.image} src={image} alt="product image" />
-                    <span className={styles.text}>필수 선택 항목</span>
-                    <span className={styles.alert}> (미선택시 주문 불가)</span>
+                    <p className={styles.text}>필수 선택 항목 (미선택시 주문 불가)</p>
                     <select ref={menuRef} className={styles.select} name="menu" id="menu-select" onChange={setMenuImages} >
                         <option value="">메뉴를 선택해주세요.</option>
                         <option value="espresso">에스프레소 (4,000)</option>
@@ -141,24 +140,30 @@ const OrderSheet = ({ onAdd }) => {
                     <p className={styles.option}>Personal Option</p>
                     <ul className={styles.list}>
                         <div className={styles.counter} >
-                        샷 추가 (샷 추가시 1샷마다 500원의 추가금이 발생합니다.)
+                            <p className={styles.counterText}>샷 추가 (1샷마다 500원의 추가금이 발생합니다.)</p>
+                            <div className={styles.counterContainer}>
                             <button className={styles.count} onClick={addCount} data-index="shot-add">+1</button>
                             <p>{shot}</p>
                             <button className={styles.count} onClick={subtractCount} data-index="shot-sub">-1</button>
                             <button className={styles.count} onClick={resetCount} data-index="shot-reset">Reset</button>
+                            </div>
                         </div>
                         <div className={styles.counter}>
-                        <li>시럽 추가 (시럽 추가시 500원의 추가금이 발생합니다.)</li>
-                        <select ref={syrupRef} name="syrup" id="syrup-select">
-                        <option value="">시럽 선택 안함</option>
-                        <option value="caramel">카라멜</option>
-                        <option value="hazelnut">헤이즐넛</option>
-                        <option value="vanila">바닐라</option>
-                        </select>
+                            <div className={styles.counterText}>
+                                <span className={styles.noti}>시럽 추가 (500원의 추가금이 발생합니다.)</span>
+                                <select ref={syrupRef} name="syrup" id="syrup-select">
+                                    <option value="">시럽 선택 안함</option>
+                                    <option value="caramel">카라멜</option>
+                                    <option value="hazelnut">헤이즐넛</option>
+                                    <option value="vanila">바닐라</option>
+                                </select>
+                            </div>
+                        <div className={styles.counterContainer}>
                             <button className={styles.count} onClick={addCount} data-index="syrup-add">+1</button>
                             <p>{syrup}</p>
                             <button className={styles.count} onClick={subtractCount} data-index="syrup-sub">-1</button>
                             <button className={styles.count} onClick={resetCount} data-index="syrup-reset">Reset</button>
+                        </div>
                         </div>
                     </ul>
                     <div className={styles.preview}>
