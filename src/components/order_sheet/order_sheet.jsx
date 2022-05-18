@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './order_sheet.module.css';
 import CalculateService from '../../service/calculate-service';
 
@@ -26,9 +26,9 @@ const OrderSheet = ({ onAdd }) => {
             drink_temperature : tempRef.current.value || popupWithAlert('온도를'),
             size : sizeRef.current.value || popupWithAlert('음료 사이즈를'),
             cup : cupRef.current.value || popupWithAlert('컵 사이즈를'),
-            shot : shot != 0 ? shot : '',
+            shot : shot !== 0 ? shot : '',
             syrup : syrupRef.current.value || '' & setSyrup(0),
-            syrup_count : syrup != 0 ? syrup : '',
+            syrup_count : syrup !== 0 ? syrup : '',
             ice : iceRef.current.value || popupWithAlert('얼음 양을'),
             price : setTotalPrice(menuRef.current.value, sizeRef.current.value, shot, syrupRef.current.value, syrup),
         }
@@ -45,10 +45,9 @@ const OrderSheet = ({ onAdd }) => {
     const setTotalPrice = (menu, size, shot, syrup_pump, syrup_count) => {
         let menuPrice = calculateService.calculateMenuPrice(menu);
         let sizePrice = calculateService.calculateSizePrice(size);
-        let shotPrice = shot != '' ? calculateService.calculateShotPrice(shot) : 0;
-        let syrupPrice = syrup_pump != '' ? calculateService.calculateSyrupPrice(syrup_count) : 0;
-        let totalPrice = menuPrice + sizePrice + shotPrice + syrupPrice;
-        return totalPrice;
+        let shotPrice = shot !== '' ? calculateService.calculateShotPrice(shot) : 0;
+        let syrupPrice = syrup_pump !== '' ? calculateService.calculateSyrupPrice(syrup_count) : 0;
+        return setPrice(menuPrice + sizePrice + shotPrice + syrupPrice);
     }
 
     const popupWithAlert = (log) => {
@@ -72,25 +71,25 @@ const OrderSheet = ({ onAdd }) => {
 
     const addCount = (event) => {
         event.preventDefault();
-        event.target.dataset.index == 'shot-add' ? setShot(shot + 1) : setSyrup(syrup + 1);
+        event.target.dataset.index === 'shot-add' ? setShot(shot + 1) : setSyrup(syrup + 1);
     }
 
     const subtractCount = (event) => {
        event.preventDefault();
        let count = 0;
-       event.target.dataset.index == 'shot-sub' ? count = shot - 1 :  count = syrup - 1
+       event.target.dataset.index === 'shot-sub' ? count = shot - 1 :  count = syrup - 1
        count = count < 0 ? 0 : count;
-       event.target.dataset.index == 'shot-sub' ? setShot(count) : setSyrup(count);
+       event.target.dataset.index === 'shot-sub' ? setShot(count) : setSyrup(count);
 
     }
 
     const resetCount = (event) => {
         event.preventDefault();
-        event.target.dataset.index == 'shot-reset' ? setShot(0) : setSyrup(0);
+        event.target.dataset.index === 'shot-reset' ? setShot(0) : setSyrup(0);
     }
 
     const setMenuImages = event => {
-        event.target.value != '' ? setImage(`/images/menu/${event.target.value}.jpg`) : setImage(`/images/menu/no-images.jpg`);
+        event.target.value !== '' ? setImage(`/images/menu/${event.target.value}.jpg`) : setImage(`/images/menu/no-images.jpg`);
     }
 
     return (
@@ -98,7 +97,7 @@ const OrderSheet = ({ onAdd }) => {
             <h1 className={styles.title}>주문하기</h1>
             <form ref={formRef} className={styles.form}>
                 <div className={styles.container}>
-                    <img className={styles.image} src={image} alt="product image" />
+                    <input type="image" img className={styles.image} src={image} alt="product image" />
                     <p className={styles.text}>필수 선택 항목 (미선택시 주문 불가)</p>
                     <select ref={menuRef} className={styles.select} name="menu" id="menu-select" onChange={setMenuImages} >
                         <option value="">메뉴를 선택해주세요.</option>

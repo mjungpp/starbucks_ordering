@@ -31,7 +31,7 @@ class ConvertService {
     }
 
     convertValTemp(temp) {
-        temp == 'hot' ? temp='따뜻한' : temp = '차가운';
+        temp === 'hot' ? temp='따뜻한' : temp = '차가운';
         return temp;
     }
 

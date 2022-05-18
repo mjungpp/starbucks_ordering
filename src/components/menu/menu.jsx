@@ -13,7 +13,7 @@ const Menu = ({ menu }) =>{
 
     return (
             <li className={styles.card}>
-                <img className={styles.img} src={setImages(item)} alt="menu photo" />
+                <input type="image" img className={styles.img} src={setImages(item)} alt="menu photo" />
                 <div className={styles.item}>
                     <p className={styles.date}>주문일 : {order_date}</p>
                     <h1 className={styles.menu}>{convertService.convertValMenu(item)}</h1>

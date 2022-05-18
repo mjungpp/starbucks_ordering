@@ -51,7 +51,7 @@ class CalculateService {
     }
 
     calculateSyrupPrice(syrup_count) {
-       return syrup_count != '' ? 500 : 0;
+       return syrup_count !== '' ? 500 : 0;
     }
 }
 
