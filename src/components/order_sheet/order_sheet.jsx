@@ -95,7 +95,7 @@ const OrderSheet = ({ onAdd }) => {
 
     return (
         <section className={styles.sheet}>
-            <h1 className={styles.title}>Order</h1>
+            <h1 className={styles.title}>주문하기</h1>
             <form ref={formRef} className={styles.form}>
                 <div className={styles.container}>
                     <img className={styles.image} src={image} alt="product image" />
@@ -137,7 +137,7 @@ const OrderSheet = ({ onAdd }) => {
                             <option value="less">적게</option>
                             <option value="full">많이</option>
                     </select>
-                    <p className={styles.option}>Personal Option</p>
+                    <p className={styles.option}>추가 옵션</p>
                     <ul className={styles.list}>
                         <div className={styles.counter} >
                             <p className={styles.counterText}>샷 추가 (1샷마다 500원의 추가금이 발생합니다.)</p>

@@ -31,7 +31,6 @@ const Order = ({ authService, menuRepository }) => {
         authService.onAuthChange(user=> {
             if(user){
                 setUserId(user.uid);
-                console.log(menus);
             }else {
                 history("/");
             }
