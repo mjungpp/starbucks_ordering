@@ -9,10 +9,10 @@
 ```
 
 <h2 align="center"><em>Execution🌎</em></h2>
-<p align="center"><em><a href=https://mjungpp.github.io/starbucks_ordering/> Let's start!</a></em><br/>
+<p align="center"><em><a href=https://starbucks-ordering.netlify.app/> Let's start!</a></em><br/>
 <br/><em>
 - 본 프로젝트는 반응형으로 제작되어, 💻과 📱에 모두 최적화 되어있습니다.<br>
-- 해당 프로젝트는 github로 배포되었습니다.</em></p>
+- 해당 프로젝트는 netlify로 배포되었습니다.</em></p>
 <br/>
 <h2 align="center"><em>Description project 📝</em></h2>
 
